@@ -1,9 +1,22 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import styles from "../login/login.module.css";
 import Link from "next/link";
+import { useMutation } from "@apollo/client";
+import { CREATE_USER } from "../graphql/mutations/user.mutations";
+import { IUser } from "@/types/user.types";
+
+type UserWithoutIdType = Omit<IUser, "id">;
 
 export default function Register() {
+  //Mutation
+  const [createUserMutation] = useMutation(CREATE_USER);
+
+  //state
+  const [registerUser, setRegisterUser] = useState<Partial<UserWithoutIdType>>(
+    {}
+  );
+
   return (
     <div className={styles.container}>
       <div className={styles.leftPanel}>
