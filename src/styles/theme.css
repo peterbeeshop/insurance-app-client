@@ -1,0 +1,58 @@
+/* styles/theme.css */
+:root {
+  /* Base colors */
+  --primary: #6c5ce7;
+  --primaryDark: #5a49e0;
+  --primaryLight: #8778ee;
+  
+  /* Neutrals */
+  --white: #ffffff;
+  --offWhite: #f5f6fa;
+  --lightGray: #e2e8f0;
+  --mediumGray: #a0aec0;
+  --darkGray: #4a5568;
+  --black: #1a202c;
+  
+  /* Accents */
+  --accentPeach: #ffa8a8;
+  --accentMint: #96f2d7;
+  --accentYellow: #ffd43b;
+  
+  /* Semantic */
+  --success: #68d391;
+  --warning: #f6e05e;
+  --error: #fc8181;
+  --info: #63b3ed;
+  
+  /* Shadows */
+  --shadowLight: 0 5px 20px rgba(0, 0, 0, 0.05);
+  --shadowMedium: 0 5px 20px rgba(0, 0, 0, 0.1);
+  
+  /* Typography */
+  --fontFamily: Inter, system-ui, sans-serif;
+  
+  /* Font sizes */
+  --fontSize-small: 0.875rem;
+  --fontSize-base: 1rem;
+  --fontSize-medium: 1.1rem;
+  --fontSize-large: 1.25rem;
+  --fontSize-xl: 1.5rem;
+  --fontSize-xxl: 1.8rem;
+  --fontSize-xxxl: 3rem;
+  
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 2.5rem;
+  --spacing-xxl: 4rem;
+  
+  /* Border radius */
+  --borderRadius-small: 4px;
+  --borderRadius-medium: 8px;
+  --borderRadius-large: 12px;
+  
+  /* Transitions */
+  --transition: 0.2s;
+}
