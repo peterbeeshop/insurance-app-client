@@ -1,0 +1,211 @@
+.pageContainer {
+  min-height: calc(100vh - 4rem); /* Account for navbar height */
+  background-color: #1a202c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+
+  margin-top: 70;
+}
+
+.claimSetupCard {
+  width: 100%;
+  max-width: 1100px;
+  height: auto;
+  min-height: 600px;
+  background-color: #6c5ce7; 
+  border-radius: 1rem;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.leftSection {
+  width: 40%;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.mainHeading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.subHeading {
+  font-size: 1.8rem;
+  color: #ffffff;
+  opacity: 0.9;
+}
+
+.formSection {
+  width: 60%;
+  background-color: rgba(74, 85, 104, 0.7);
+  padding: 3rem 2rem;
+  border-radius: 1rem;
+  margin: 2rem;
+}
+
+.formGroup {
+  /* margin-bottom: 1.5rem; */
+  margin-top: 3rem;
+}
+
+.label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.input {
+  width: 100%;
+  padding: 0.50rem;
+  border: none;
+  border-bottom: 2px solid #fc8181;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 1rem;
+  outline: none;
+}
+
+.input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.input:focus {
+  border-bottom-color: #63b3ed;
+}
+
+.uploadArea {
+  width: 100%;
+  height: 8rem;
+  background-color: rgba(26, 32, 44, 0.5);
+  border: 2px dashed #a0aec0;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fileInput {
+  display: none;
+}
+
+.uploadButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  color: #a0aec0;
+  padding: 1rem;
+}
+
+.uploadButton:hover {
+  color: #ffffff; 
+}
+
+.imagesPreview {
+  margin-top: 0.5rem;
+  color: #ffffff; 
+  font-size: 0.875rem;
+}
+
+.nextButton {
+  margin-top: 2rem;
+  padding: 0.75rem 2rem;
+  background-color: #63b3ed;
+  color: #ffffff; 
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.nextButton:hover {
+  background-color: #4299e1;
+}
+
+/* Corner decoration dots to match the design */
+.claimSetupCard::before,
+.claimSetupCard::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.claimSetupCard::before {
+  top: 10px;
+  left: 10px;
+}
+
+.claimSetupCard::after {
+  top: 10px;
+  right: 10px;
+}
+
+/* Bottom dots */
+.claimSetupCard::before,
+.claimSetupCard::after,
+.claimSetupCard::before,
+.claimSetupCard::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.claimSetupCard::before {
+  top: 10px;
+  left: 10px;
+}
+
+.claimSetupCard::after {
+  top: 10px;
+  right: 10px;
+}
+
+/* Pseudo-elements for the bottom dots */
+.claimSetupCard::before {
+  top: 10px; 
+  left: 10px;
+}
+
+.claimSetupCard::after {
+  top: 10px;
+  right: 10px;
+}
+
+/* Additional pseudo-elements for bottom dots */
+.claimSetupCard .leftSection::before {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.claimSetupCard .formSection::after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
