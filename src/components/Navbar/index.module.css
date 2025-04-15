@@ -1,0 +1,127 @@
+@import '../../styles/theme.ts';
+
+.navbar {
+  width: 100%;
+  background-color: #1a202c;
+  color: #ffffff;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo {
+  position: relative;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: #1a202c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dotRed {
+  position: absolute;
+  top: 0.25rem;
+  left: 0.25rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background-color: #fc8181;
+}
+
+.dotTeal {
+  position: absolute;
+  bottom: 0.25rem;
+  left: 0.25rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background-color: #96f2d7;
+}
+
+.dotWhite {
+  position: absolute;
+  bottom: 0.25rem;
+  right: 0.25rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background-color: #ffffff; 
+}
+
+.appName {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.navLinksContainer {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navLink {
+  padding: 0.5rem 1.5rem;
+  border-radius: 9999px;
+  color: #a0aec0; 
+  transition: all 0.2s;
+  position: relative;
+}
+
+.navLink:hover {
+  color: #ffffff;
+}
+
+.activeNavLink {
+  background-color: #404B63;
+  color: #ffffff; 
+}
+
+/* Active nav items */
+.activeNavLink::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 25%;
+  width: 50%;
+  height: 2px;
+  background-color: #63b3ed;
+}
+
+.userSection {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.greeting {
+  color: #63b3ed;
+}
+
+.logoutButton {
+  color: #fc8181;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+}
+
+.logoutButton:hover {
+  color: #ffa8a8;
+}

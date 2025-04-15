@@ -121,8 +121,18 @@
   transition: background-color var(--transition);
 }
 
+.loginButton:disabled {
+  background-color: #5c5365; /* Light gray color when disabled */
+  cursor: not-allowed;       /* Changes cursor to indicate it's not clickable */
+  opacity: 0.7;              /* Makes the button appear faded */
+}
+
 .loginButton:hover {
   background-color: var(--primaryDark);
+}
+
+.errorText {
+  color: red;
 }
 
 .registerLink {
