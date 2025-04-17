@@ -1,16 +1,16 @@
-"use client";
+// "use client";
 import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { LogOut } from "lucide-react";
 import styles from "./index.module.css";
+import { useSelector } from "react-redux";
+import { userSelectors } from "@/store/user.store";
 
-interface NavbarProps {
-  username?: string;
-}
-
-const Navbar: React.FC<NavbarProps> = ({ username = "John" }) => {
+const Navbar = () => {
   const pathname = usePathname();
+
+  const user = useSelector(userSelectors.selectUser);
 
   return (
     <nav className={styles.navbar}>
@@ -48,7 +48,7 @@ const Navbar: React.FC<NavbarProps> = ({ username = "John" }) => {
 
       {/* User Info and Logout */}
       <div className={styles.userSection}>
-        <span className={styles.greeting}>Hello, {username}</span>
+        <span className={styles.greeting}>Hello, {user.first_name}</span>
         <button className={styles.logoutButton}>
           <LogOut size={20} />
         </button>

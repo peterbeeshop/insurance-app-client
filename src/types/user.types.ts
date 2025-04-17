@@ -1,4 +1,4 @@
-export interface IUser {
+export interface AppUser {
   id: string;
   email: string;
   first_name: string;

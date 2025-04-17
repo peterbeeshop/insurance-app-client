@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Toaster } from "react-hot-toast";
 import "./globals.css";
 import { ApolloClientProvider } from "@/providers/ApolloProvider";
-import Navbar from "@/components/Navbar";
+import ReduxProvider from "@/providers/ReduxProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,10 +31,13 @@ export default function RootLayout({
         style={{ backgroundColor: "#101E32" }}
         className={`${geistSans.variable} ${geistMono.variable}`}
       >
-        <ApolloClientProvider>
-          <Navbar />
-          {children}
-        </ApolloClientProvider>
+        {/* Redux provider */}
+        <ReduxProvider>
+          <ApolloClientProvider>
+            <Toaster position="top-center" />
+            {children}
+          </ApolloClientProvider>
+        </ReduxProvider>
       </body>
     </html>
   );
